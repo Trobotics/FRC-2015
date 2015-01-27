@@ -1,12 +1,15 @@
 
 package org.usfirst.frc.team5759.robot;
 
+import org.usfirst.frc.team5759.robot.commands.ExampleCommand;
+import org.usfirst.frc.team5759.robot.subsystems.DriveTerrain;
+import org.usfirst.frc.team5759.robot.subsystems.ExampleSubsystem;
+
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
+import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import org.usfirst.frc.team5759.robot.commands.ExampleCommand;
-import org.usfirst.frc.team5759.robot.subsystems.ExampleSubsystem;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -21,6 +24,7 @@ public class Robot extends IterativeRobot {
 	public static OI oi;
 	
     Command autonomousCommand;
+    DriveTerrain e;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -28,6 +32,8 @@ public class Robot extends IterativeRobot {
      */
     public void robotInit() {
 		oi = new OI();
+		
+		e = new DriveTerrain();
         // instantiate the command used for the autonomous period
         autonomousCommand = new ExampleCommand();
     }
@@ -68,6 +74,7 @@ public class Robot extends IterativeRobot {
      * This function is called periodically during operator control
      */
     public void teleopPeriodic() {
+        e.forward();
         Scheduler.getInstance().run();
     }
     

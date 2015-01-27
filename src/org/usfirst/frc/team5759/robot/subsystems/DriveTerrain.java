@@ -26,7 +26,14 @@ public class DriveTerrain extends Subsystem {
     
     public void forward()
     {
-    	joystickDrive.getX
+    	double YPos = joystickDrive.getY();
+    	double XPos = joystickDrive.getX();
+    	
+    	if (XPos < 0 && YPos < 0)
+    	{
+    		
+    	}
+    	else if (XPos < 0 && YPos>)
     }
 }
 
