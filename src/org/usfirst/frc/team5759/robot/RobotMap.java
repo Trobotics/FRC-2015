@@ -1,5 +1,6 @@
 package org.usfirst.frc.team5759.robot;
 
+import edu.wpi.first.wpilibj.Gyro;
 import edu.wpi.first.wpilibj.Jaguar;
 import edu.wpi.first.wpilibj.Joystick;
 
@@ -19,14 +20,16 @@ public class RobotMap {
     // number and the module. For example you with a rangefinder:
     // public static int rangefinderPort = 1;
     // public static int rangefinderModule = 1;
+
+	/* Ports */
 	
 	public static int leftMotorPort = 0;
 	public static int rightMotorPort = 1;
-	
-	public static Jaguar leftMotor = new Jaguar(leftMotorPort);
-	public static Jaguar rightMotor = new Jaguar(rightMotorPort);
-	
 	public static int joystickDrivePort = 0;
 	
+	/* Actuators */
+	public static Jaguar leftMotor = new Jaguar(leftMotorPort);
+	public static Jaguar rightMotor = new Jaguar(rightMotorPort);
 	public static Joystick joystickDrive = new Joystick(joystickDrivePort);
+//	public static Gyro gyro = new Gyro(channel);
 }

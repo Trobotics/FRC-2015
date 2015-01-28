@@ -19,25 +19,29 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
  * creating this project, you must also update the manifest file in the resource
  * directory.
  */
-public class Robot extends IterativeRobot {
+public class Robot extends IterativeRobot  {
 
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
 	
     Command autonomousCommand;
-    Joystick joystick;
-    DriveTerrain e;
+    DriveTerrain driveTerrain;
 
     /**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
      */
+    
     public void robotInit() {
 		oi = new OI();
-		
-		e = new DriveTerrain();
+		driveTerrain = new DriveTerrain();
         // instantiate the command used for the autonomous period
         autonomousCommand = new ExampleCommand();
+        
+        
+        
+        /* ***************************************** */
+        System.out.println("ROBOT SYSTEMS INITIALIZED");
     }
 	
 	public void disabledPeriodic() {
@@ -76,8 +80,8 @@ public class Robot extends IterativeRobot {
      * This function is called periodically during operator control
      */
     public void teleopPeriodic() {
-        e.forward();
         Scheduler.getInstance().run();
+        driveTerrain.forward();
     }
     
     /**

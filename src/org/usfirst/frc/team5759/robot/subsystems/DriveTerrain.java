@@ -29,11 +29,11 @@ public class DriveTerrain extends Subsystem {
     	double YPos = joystickDrive.getY();
     	double XPos = joystickDrive.getX();
     	
-    	if (XPos < 0 && YPos < 0)
+  /*  	if (XPos < 0 && YPos < 0)
     	{
     		
     	}
-    	else if (XPos < 0 && YPos>)
+    	else if (XPos < 0 && YPos>)*/
     }
 }
 

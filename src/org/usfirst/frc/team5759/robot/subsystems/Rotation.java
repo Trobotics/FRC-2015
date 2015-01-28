@@ -1,6 +1,14 @@
 package org.usfirst.frc.team5759.robot.subsystems;
 
-public interface Rotation
+interface Rotation
 {
-
+	// constant declarations
+	
+	// method signatures
+	
+	int countRevolutions();
+	
+	
+	
+	
 }
