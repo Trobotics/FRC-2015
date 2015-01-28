@@ -24,16 +24,37 @@ public class DriveTerrain extends Subsystem {
         //setDefaultCommand(new MySpecialCommand());
     }
     
-    public void forward()
-    {
-    	double YPos = joystickDrive.getY();
-    	double XPos = joystickDrive.getX();
+    public void forward() {
     	
-  /*  	if (XPos < 0 && YPos < 0)
-    	{
-    		
-    	}
-    	else if (XPos < 0 && YPos>)*/
+    }
+    
+    enum Quadrant {
+    	TopLeft,
+    	TopRight,
+    	BottomLeft,
+    	BottomRight,
+    }
+    
+    public Quadrant getQuadrant(double x, double y)
+    {
+    	if (x < 0 && y < 0)
+    	
+    		return Quadrant.TopLeft;
+    	
+    	else if (x > 0 && y < 0)
+    	
+    		return Quadrant.TopRight;
+    	
+    	else if (x < 0 && y > 0)
+    	
+    		return Quadrant.BottomLeft;
+    	
+    	else if (x > 0 && y > 0)
+    	
+    		return Quadrant.BottomLeft;
+    	
+    	else
+    		return null;
     }
 }
 
