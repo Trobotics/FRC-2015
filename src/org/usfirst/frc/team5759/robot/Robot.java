@@ -6,6 +6,7 @@ import org.usfirst.frc.team5759.robot.subsystems.DriveTerrain;
 import org.usfirst.frc.team5759.robot.subsystems.ExampleSubsystem;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -24,6 +25,7 @@ public class Robot extends IterativeRobot {
 	public static OI oi;
 	
     Command autonomousCommand;
+    Joystick joystick;
     DriveTerrain e;
 
     /**
