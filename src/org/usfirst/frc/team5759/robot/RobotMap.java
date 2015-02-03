@@ -1,8 +1,11 @@
 package org.usfirst.frc.team5759.robot;
 
+import edu.wpi.first.wpilibj.DigitalInput;
+import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.Gyro;
 import edu.wpi.first.wpilibj.Jaguar;
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.Ultrasonic;
 
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
@@ -26,10 +29,13 @@ public class RobotMap {
 	public static int leftMotorPort = 0;
 	public static int rightMotorPort = 1;
 	public static int joystickDrivePort = 0;
+	public static int aChannel = 4;
+	public static int bChannel = 5;
 	
 	/* Actuators */
 	public static Jaguar leftMotor = new Jaguar(leftMotorPort);
 	public static Jaguar rightMotor = new Jaguar(rightMotorPort);
 	public static Joystick joystickDrive = new Joystick(joystickDrivePort);
-//	public static Gyro gyro = new Gyro(channel);
+	public static Encoder encoder = new Encoder(aChannel, bChannel);
+	
 }

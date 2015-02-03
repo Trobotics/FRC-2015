@@ -4,6 +4,7 @@ import org.usfirst.frc.team5759.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.Jaguar;
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
@@ -16,6 +17,7 @@ public class DriveTerrain extends Subsystem {
 	
 	Jaguar leftMotor = RobotMap.leftMotor;
 	Jaguar rightMotor = RobotMap.rightMotor;
+	
 	
 	Joystick joystickDrive = RobotMap.joystickDrive;
 	
@@ -35,5 +37,6 @@ public class DriveTerrain extends Subsystem {
     	}
     	else if (XPos < 0 && YPos>)*/
     }
+
 }
 

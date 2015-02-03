@@ -35,15 +35,11 @@ public class Robot extends IterativeRobot
 	Command autonomousCommand;
 	AnalogInput analogInput;
 	AnalogOutput analogOutput;
-	public static final int PING_CHANNEL = 1;
-	public static final int ECHO_CHANNEL = 2;
 	private double range;
-	Ultrasonic ultrasonic;
 	
-//	RobotDrive drive;
-//	double outputMagnitude = 0.5;
-//	double curve = 0;
-	// ObstructionEvasionNomad obstructionEvasion;
+	RobotDrive drive;
+	double outputMagnitude = 0.5;
+	double curve = 0;
 
 	/**
 	 * This function is run when the robot is first started up and should be
@@ -59,11 +55,8 @@ public class Robot extends IterativeRobot
 		// instantiate the command used for the autonomous period
 		autonomousCommand = new ExampleCommand();
 //		drive = new RobotDrive(RobotMap.leftMotor, RobotMap.rightMotor);
-//		ultrasonic = new Ultrasonic(ECHO_CHANNEL, PING_CHANNEL);
-		ultrasonic = new Ultrasonic(PING_CHANNEL, ECHO_CHANNEL);
-		ultrasonic.setEnabled(true);
-//		ultrasonic.setAutomaticMode(false); setting this to true causes the robot to lose the code
-		/* ***************************************** */
+		
+				/* ***************************************** */
 		System.out.println("***** ROBOT SYSTEMS INITIALIZED *****");
 	}
 
@@ -87,9 +80,8 @@ public class Robot extends IterativeRobot
 	public void autonomousPeriodic()
 	{
 		Scheduler.getInstance().run();
-/*		
-*/
-	
+//		drive.drive(outputMagnitude, curve);
+		
 	}
 
 	public void teleopInit()
@@ -118,13 +110,7 @@ public class Robot extends IterativeRobot
 	 */
 	public void teleopPeriodic()
 	{
-		Scheduler.getInstance().run();	
-//		double voltage = analogInput.getVoltage();
-//		double range = voltage/58;
-//		System.out.println("range " + range);
-
-		System.out.println(ultrasonic.getRangeInches());
-		
+		Scheduler.getInstance().run();			
 	}
 
 	/**
