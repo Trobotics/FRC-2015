@@ -1,15 +1,12 @@
 
 package org.usfirst.frc.team5759.robot;
 
-import org.usfirst.frc.team5759.robot.commands.ExampleCommand;
-import org.usfirst.frc.team5759.robot.subsystems.DriveTerrain;
-import org.usfirst.frc.team5759.robot.subsystems.ExampleSubsystem;
+import org.usfirst.frc.team5759.robot.subsystems.DriveControl;
+import org.usfirst.frc.team5759.robot.subsystems.LiftControl;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
-import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
 /**
@@ -20,12 +17,11 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
  * directory.
  */
 public class Robot extends IterativeRobot  {
-
-	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
+	
 	public static OI oi;
 	
     Command autonomousCommand;
-    DriveTerrain driveTerrain;
+    LiftControl lift;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -34,11 +30,8 @@ public class Robot extends IterativeRobot  {
     
     public void robotInit() {
 		oi = new OI();
-		driveTerrain = new DriveTerrain();
-        // instantiate the command used for the autonomous period
-        autonomousCommand = new ExampleCommand();
-        
-        
+		lift = new LiftControl();
+        // instantiate the command used for the autonomous period      
         
         /* ***************************************** */
         System.out.println("ROBOT SYSTEMS INITIALIZED");
@@ -66,6 +59,7 @@ public class Robot extends IterativeRobot  {
         // continue until interrupted by another command, remove
         // this line or comment it out.
         if (autonomousCommand != null) autonomousCommand.cancel();
+        lift.start();
     }
 
     /**
@@ -81,7 +75,7 @@ public class Robot extends IterativeRobot  {
      */
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
-        driveTerrain.forward();
+        lift.start();
     }
     
     /**
