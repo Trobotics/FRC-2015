@@ -1,0 +1,42 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is behind 'origin/master' by 2 commits, and can be fast-forwarded.
+#   (use "git pull" to update your local branch)
+#
+# Changes to be committed:
+#	modified:   bin/org/usfirst/frc/team5759/robot/Robot.class
+#	modified:   bin/org/usfirst/frc/team5759/robot/RobotMap.class
+#	modified:   bin/org/usfirst/frc/team5759/robot/subsystems/DriveTerrain.class
+#	modified:   build/org/usfirst/frc/team5759/robot/Robot.class
+#	modified:   build/org/usfirst/frc/team5759/robot/RobotMap.class
+#	new file:   build/org/usfirst/frc/team5759/robot/commands/CenterOnBox.class
+#	new file:   build/org/usfirst/frc/team5759/robot/commands/DetectBox.class
+#	new file:   build/org/usfirst/frc/team5759/robot/commands/Lift.class
+#	new file:   build/org/usfirst/frc/team5759/robot/commands/ObstructionEvasionNomad.class
+#	new file:   build/org/usfirst/frc/team5759/robot/commands/ReflectionLock.class
+#	new file:   build/org/usfirst/frc/team5759/robot/commands/TurnWithGyro.class
+#	new file:   build/org/usfirst/frc/team5759/robot/subsystems/CameraControl.class
+#	modified:   build/org/usfirst/frc/team5759/robot/subsystems/DriveTerrain.class
+#	new file:   build/org/usfirst/frc/team5759/robot/subsystems/GyroscopeControl.class
+#	new file:   build/org/usfirst/frc/team5759/robot/subsystems/LiftControl.class
+#	new file:   build/org/usfirst/frc/team5759/robot/subsystems/ReflectionModule.class
+#	new file:   build/org/usfirst/frc/team5759/robot/subsystems/Rotation.class
+#	new file:   build/org/usfirst/frc/team5759/robot/subsystems/UltrasonicControl.class
+#	modified:   dist/FRCUserProgram.jar
+#	modified:   src/org/usfirst/frc/team5759/robot/Robot.java
+#	modified:   src/org/usfirst/frc/team5759/robot/RobotMap.java
+#	new file:   src/org/usfirst/frc/team5759/robot/commands/ObstructionEvasionNomad.java
+#	modified:   src/org/usfirst/frc/team5759/robot/subsystems/DriveTerrain.java
+#	new file:   src/org/usfirst/frc/team5759/robot/subsystems/EncoderControl.java
+#	new file:   src/org/usfirst/frc/team5759/robot/subsystems/GyroscopeControl.java
+#	new file:   src/org/usfirst/frc/team5759/robot/subsystems/UltrasonicControl.java
+#	modified:   sysProps.xml
+#
+# Changes not staged for commit:
+#	deleted:    src/org/usfirst/frc/team5759/robot/subsystems/DriveControl.java
+#	deleted:    src/org/usfirst/frc/team5759/robot/subsystems/GyroTurnControl.java
+#	deleted:    src/org/usfirst/frc/team5759/robot/subsystems/Rotation.java
+#
+

@@ -5,7 +5,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 /**
  *
  */
-public class GyroTurnControl extends Subsystem {
+public class GyroscopeControl extends Subsystem {
     
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
@@ -14,17 +14,5 @@ public class GyroTurnControl extends Subsystem {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
     }
-    
-    public void turn(double degrees)
-    {
-    	
-    }
-    
-    public void reset()
-    {
-    	
-    }
-    
-    
 }
 
