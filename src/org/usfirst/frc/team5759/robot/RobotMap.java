@@ -1,5 +1,9 @@
 package org.usfirst.frc.team5759.robot;
 
+import org.usfirst.frc.team5759.robot.subsystems.DriveControl;
+import org.usfirst.frc.team5759.robot.subsystems.LiftControl;
+
+import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.Victor;
@@ -33,8 +37,10 @@ public class RobotMap {
 	public static int liftRightPort = 5;
 	
 	public static int joystickDrivePort = 0;
-	
 	public static int joystickLiftPort = 1;
+	
+	public static int aChannel = 0;
+	public static int bChannel = 1;
 	
 	/* Actuators */
 	public static Talon driveLeftFrontMotor = new Talon(driveLeftFrontPort);
@@ -47,7 +53,13 @@ public class RobotMap {
 	public static Victor liftRightMotor = new Victor(liftRightPort);
 
 	public static Joystick joystickDrive = new Joystick(joystickDrivePort);
-	
 	public static Joystick joystickLift = new Joystick(joystickLiftPort);
+	
+	public static LiftControl lift = new LiftControl();
+	public static DriveControl drive = new DriveControl();
+	
 //	public static Gyro gyro = new Gyro(channel);
+	
+	public static Encoder encoder = new Encoder(aChannel, bChannel);
+	
 }
